@@ -1,1 +1,1278 @@
-{"_type":"export","__export_format":4,"__export_date":"2025-02-19T17:44:54.950Z","__export_source":"insomnia.desktop.app:v10.3.1","resources":[{"_id":"req_f38a28070fe14c3797953a2170621239","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736941515348,"created":1736536015899,"url":"https://idpcvs.peugeot.com/am/oauth2/access_token","name":"Get token","description":"","method":"POST","body":{},"parameters":[{"name":"grant_type","value":"authorization_code","id":"pair_d2879af8264742289ccdbff4e8abd038"},{"name":"code","value":"fb8b579c-2814-49db-8a3c-fb1209359a87","id":"pair_d0bf73d6337f453d859f24914ad3bb4b"},{"name":"redirect_uri","value":"mymap://oauth2redirect/fr","id":"pair_68978a5be5ef4e48afdf19a81847e87a"}],"headers":[{"name":"Authorization","value":"Basic MWVlYmMyZDUtNWRmMy00NTliLWE2MjQtMjBhYmZjZjgyNTMwOlQ1dFA3aVMwY084c0MwbEEyaUUyYVI3Z0s2dUU1ckYzbEo4cEMzbk8xcFI3dEw4dlUx","id":"pair_92568946aa234d93a13daadfa6f8bda7","disabled":false},{"id":"pair_fbe2ffb103f746fab9fb7b18988af30a","name":"User-Agent","value":"insomnia/10.3.0","description":"","disabled":false},{"id":"pair_6b485e0d92dc4971a2199219b79c043a","name":"Content-Type","value":"application/x-www-form-urlencoded","description":"","disabled":false}],"authentication":{"type":"none"},"metaSortKey":-1736536015899,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"wrk_5331a61017564f45a0d7a83e997660c8","parentId":null,"modified":1736337936406,"created":1736281218811,"name":"PSA","description":"","scope":"collection","_type":"workspace"},{"_id":"req_94b7cada8e7e4f3ba10379302a7c3968","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1739987030057,"created":1736281332582,"url":"{{ _.api_url }}user/vehicles?client_id={{ _.client_id }}","name":"Vehicles","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}","usePkce":true,"pkceMethod":"S256","state":"State01","credentialsInBody":false},"metaSortKey":-1736281332582,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ad4f321abaa442bcaea053921339d147","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736534984030,"created":1736281613009,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}","name":"Vehicle","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280433101.5,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_2650cac1b9d04fc2bbe0fb685ddd632d","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1737123923272,"created":1737123771224,"url":"https://api.groupe-psa.com/connectedcar/v4/vin/{{ _.vehicle_vin }}","name":"Vehicle capabilities","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280404992.7344,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ac047dc290294a50a06de72f0967d20b","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736282510341,"created":1736282506383,"url":"{{ _.api_url }}user","name":"User","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280376883.9688,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_85e79e44e536417eb06d59a422096cc5","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736282273534,"created":1736282273534,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/collisions","name":"Collisions","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280320666.4375,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_3b394ac3ca0f448eb6d022288af0b09a","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736282208489,"created":1736282181715,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/alarms","name":"Alarms","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280208231.375,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c9275afccdee4eb28a952c3634f51ae5","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736284441803,"created":1736284435482,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/alarms","name":"Alarms","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n  \"label\": \"Battery changing\",\n  \"subscribeParam\": {  }, \n  \"extendedEventParam\": [ \"vehicle.status\" ],\n  \"triggerParam\": {\n    \"triggers\": [\n      {\n        \"name\": \"batteryStep\",\n        \"data\": { \"data\": \"vehicle.energy.electric.level\", \"op\": \"equal\", \"value\": [\"0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100\"] }\n      }\n    ]\n  }\n}\n"},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280180122.6094,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_fe66f4d4bf424aafad8e5c3467fe60a8","parentId":"fld_f74a8cecf2c54889ae5c8fe5f86e4831","modified":1739987005897,"created":1736333791491,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/callbacks/{{ _.callback_id }}/remotes","name":"Remotes","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736333794600,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_f74a8cecf2c54889ae5c8fe5f86e4831","parentId":"fld_56814f2e91f94ec7bf66850a42e6c3f2","modified":1736333780976,"created":1736333780976,"name":"Remotes","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1736333780976,"environmentType":"kv","_type":"request_group"},{"_id":"fld_56814f2e91f94ec7bf66850a42e6c3f2","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736333765597,"created":1736319917292,"name":"Callbacks","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1736280166068.2266,"environmentType":"kv","_type":"request_group"},{"_id":"req_9d98194050f94118b479fee7db124347","parentId":"fld_f74a8cecf2c54889ae5c8fe5f86e4831","modified":1736337106666,"created":1736337052205,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/callbacks/{{ _.callback_id }}/remotes/{{ _.remote_action_id }}","name":"Remote","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736333714269.75,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_cebeb840b35f4626b410e809e8bec3cf","parentId":"fld_f74a8cecf2c54889ae5c8fe5f86e4831","modified":1737581891037,"created":1736333865805,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/callbacks/{{ _.callback_id }}/remotes","name":"Remotes","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n  \"label\": \"wakup\",\n  \"wakeUp\": {\n    \"action\": \"WakeUp\"\n  }\n}"},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736333633939.5,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ac82d810b4564069be01755e17ada609","parentId":"fld_706a307135754264ad8086d2df62934e","modified":1736333526526,"created":1736333469777,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/{{ _.callback_id }}/monitors","name":"Monitors","description":"","method":"GET","body":{"mimeType":"application/json","text":"{\n\t\"label\": \"test\",\n\t\"type\": [\n\t\t\"Monitor\",\n\t\t\"Remote\"\n\t],\n\t\"wakeUp\": {\n\t\t\"action\": \"WakeUp\"\n\t},\n\t\"callback\": {\n\t\t\"webhook\": {\n\t\t\t\"target\": \"https://my.post.callback\",\n\t\t\t\"name\": \"wakeup\",\n\t\t\t\"batch\": {\n\t\t\t\t\"enabled\": true,\n\t\t\t\t\"size\": 100\n\t\t\t},\n\t\t\t\"attributes\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Header\",\n\t\t\t\t\t\"key\": \"X-Vehicle_Id\",\n\t\t\t\t\t\"value\": \"zz\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736333473279,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_706a307135754264ad8086d2df62934e","parentId":"fld_56814f2e91f94ec7bf66850a42e6c3f2","modified":1736333457776,"created":1736333457776,"name":"Monitors","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1736333457776,"environmentType":"kv","_type":"request_group"},{"_id":"req_b02bd12aa3c04e8e91bf907f376f7631","parentId":"fld_56814f2e91f94ec7bf66850a42e6c3f2","modified":1737581690609,"created":1736282914301,"url":"{{ _.api_url }}user/callbacks","name":"Callbacks","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"label\": \"callbackRemoteWakeUp\",\n\t\"type\": [ \"Remote\"],\n\t\"wakeUp\": {\n\t\t\"action\": \"WakeUp\"\n\t},\n\t\"callback\": {\n\t\t\"webhook\": {\n\t\t\t\"target\": \"https://my.post.callback\",\n\t\t\t\"name\": \"wakeup\"\n\t\t}\n\t}\n}"},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736319928568,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_3b8c0b1e311e4ff4af4c6770438b64e1","parentId":"fld_56814f2e91f94ec7bf66850a42e6c3f2","modified":1736357743970,"created":1736333259057,"url":"{{ _.api_url }}user/callbacks/{{ _.callback_id }}","name":"Callbacks","description":"","method":"DELETE","body":{"mimeType":"application/json","text":"{\n\t\"label\": \"test\",\n\t\"type\": [\n\t\t\"Monitor\",\n\t\t\"Remote\"\n\t],\n\t\"wakeUp\": {\n\t\t\"action\": \"WakeUp\"\n\t},\n\t\"callback\": {\n\t\t\"webhook\": {\n\t\t\t\"target\": \"https://my.post.callback\",\n\t\t\t\"name\": \"wakeup\",\n\t\t\t\"batch\": {\n\t\t\t\t\"enabled\": true,\n\t\t\t\t\"size\": 100\n\t\t\t},\n\t\t\t\"attributes\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Header\",\n\t\t\t\t\t\"key\": \"X-Vehicle_Id\",\n\t\t\t\t\t\"value\": \"zz\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736319928518,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_a807f9873ee24063976a9f870b493528","parentId":"fld_56814f2e91f94ec7bf66850a42e6c3f2","modified":1736334099312,"created":1736282318828,"url":"{{ _.api_url }}user/callbacks","name":"Callbacks","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736319928468,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_0a91192879824f91be4ace76539cd676","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736942151213,"created":1736282219803,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/trips","name":"Trips","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736280095796.3125,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b33e9c3d270d4619a3de450f15670129","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736282369564,"created":1736282042810,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/lastPosition","name":"Last position","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736279983361.25,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_f6e0bc001f7c4674b5bff4ff3487dcfa","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736282482864,"created":1736282478978,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/telemetry","name":"Telemetry","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736279758491.125,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b21f6cff66d64a87a35680c0eb08ecbd","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736547527917,"created":1736282547077,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/maintenance","name":"Maintenance","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736279646056.0625,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d43a469e44184ff5a18a718e6f083f77","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1737799114232,"created":1736282606475,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/status","name":"Status","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}","usePkce":true,"pkceMethod":"S256"},"metaSortKey":-1736279589838.5312,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_825d40a49d8d4188a4c4c7bc512760a0","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736282802017,"created":1736282797523,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/monitors","name":"Monitors","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}"},"metaSortKey":-1736279561729.7656,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_6491164ddc014991aaeed27406ac6469","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736598238749,"created":1736285160474,"url":"{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/remotes","name":"Remotes","description":"","method":"GET","body":{},"parameters":[{"id":"pair_b4e71e503734438fbb01dc82d6ca448b","name":"client_id","value":"{{ _.client_id }}","description":"","disabled":false}],"headers":[{"name":"X-Introspect-Realm","value":"{{ _.realm }}","id":"pair_0bebc18e6ac741d89b71c2e0e87598b2"}],"authentication":{"type":"oauth2","grantType":"authorization_code","authorizationUrl":"{{ _.authorization_url }}","accessTokenUrl":"{{ _.token_url }}","clientId":"{{ _.client_id }}","clientSecret":"{{ _.client_secret }}","scope":"openid profile","redirectUrl":"{{ _.redirect_rul }}","usePkce":true},"metaSortKey":-1736279547675.3828,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_b8db88da520dcca1f6d44bec94b29da006c961de","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1736281975313,"created":1736281218813,"name":"Base Environment","data":{"client_id":"1eebc2d5-5df3-459b-a624-20abfcf82530","client_secret":"T5tP7iS0cO8sC0lA2iE2aR7gK6uE5rF3lJ8pC3nO1pR7tL8vU1","authorization_url":"https://idpcvs.peugeot.com/am/oauth2/authorize","token_url":"https://idpcvs.peugeot.com/am/oauth2/access_token","redirect_rul":"mymap://oauth2redirect/fr","api_url":"https://api.groupe-psa.com/connectedcar/v4/","realm":"clientsB2CPeugeot"},"dataPropertyOrder":null,"color":null,"isPrivate":false,"metaSortKey":1736281218813,"environmentType":"kv","kvPairData":[{"id":"envPair_2ba6d940e38f481b8b0e407e338be314","name":"client_id","value":"1eebc2d5-5df3-459b-a624-20abfcf82530","type":"str","enabled":true},{"id":"envPair_630dab800401448fa849ff3b23260791","name":"client_secret","value":"T5tP7iS0cO8sC0lA2iE2aR7gK6uE5rF3lJ8pC3nO1pR7tL8vU1","type":"str","enabled":true},{"id":"envPair_93e4a1a161d64e4c91a2aab9255a9e21","name":"authorization_url","value":"https://idpcvs.peugeot.com/am/oauth2/authorize","type":"str","enabled":true},{"id":"envPair_f83e40d87d4542a98563a947b691e77f","name":"token_url","value":"https://idpcvs.peugeot.com/am/oauth2/access_token","type":"str","enabled":true},{"id":"envPair_22ae7e4ab0ae4921889c0439a970da1a","name":"redirect_rul","value":"mymap://oauth2redirect/fr","type":"str","enabled":true},{"id":"envPair_49c25c9959964aa9886a45811449ca51","name":"api_url","value":"https://api.groupe-psa.com/connectedcar/v4/","type":"str","enabled":true},{"id":"envPair_9c3b0417bf3b4d72afd6dc83fce366bd","name":"realm","value":"clientsB2CPeugeot","type":"str","enabled":true}],"_type":"environment"},{"_id":"jar_b8db88da520dcca1f6d44bec94b29da006c961de","parentId":"wrk_5331a61017564f45a0d7a83e997660c8","modified":1737922994569,"created":1736281218814,"name":"Default Jar","cookies":[{"key":"PSACountry","value":"FR","domain":"groupe-psa.com","path":"/","hostOnly":false,"creation":"2025-01-07T20:22:35.611Z","lastAccessed":"2025-01-07T20:22:35.611Z","id":"b22f4664-1879-4b54-b529-705bbd67a617"},{"key":"BIGipServerBE_IDPCLI_CVS_PROD_HTTPS_VIRTUAL.app~BE_IDPCLI_CVS_PROD_HTTPS_VIRTUAL_pool","value":"647135242.47873.0000","domain":"idpcvs.peugeot.com","path":"/","secure":true,"httpOnly":true,"hostOnly":true,"creation":"2025-01-07T20:23:38.187Z","lastAccessed":"2025-01-07T20:23:38.187Z","id":"2360b0f8-bb1a-476c-954f-52be69793234"},{"key":"PSACountry","value":"FR","domain":"peugeot.com","path":"/","hostOnly":false,"creation":"2025-01-07T20:23:38.188Z","lastAccessed":"2025-01-07T20:23:38.188Z","id":"45783c5d-a48c-4f94-bbc8-bfd9c50ed7ab"},{"key":"rememberMe","value":"deleteMe","expires":"2025-01-25T20:23:14.000Z","maxAge":0,"domain":"api.groupe-psa.com","path":"/","hostOnly":true,"creation":"2025-01-07T20:24:04.555Z","lastAccessed":"2025-01-26T20:23:14.568Z","id":"9881d1ec-1d85-4320-9f1b-6d876e7a7439"},{"key":"JSESSIONID","value":"UFX0DTc8ERORCUu0RK_hQrPSsLP_k5BIZtdKNcxV","domain":"api.groupe-psa.com","path":"/","hostOnly":true,"creation":"2025-01-07T20:24:04.555Z","lastAccessed":"2025-01-26T20:23:14.568Z","id":"8028e5c8-c00f-4009-a156-975ee8f3d4e0"}],"_type":"cookie_jar"}]}
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2025-02-25T23:16:25.012Z",
+    "__export_source": "insomnia.desktop.app:v10.3.1",
+    "resources": [
+        {
+            "_id": "req_f38a28070fe14c3797953a2170621239",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736941515348,
+            "created": 1736536015899,
+            "url": "https://idpcvs.peugeot.com/am/oauth2/access_token",
+            "name": "Get token",
+            "description": "",
+            "method": "POST",
+            "body": {},
+            "parameters": [
+                {
+                    "name": "grant_type",
+                    "value": "authorization_code",
+                    "id": "pair_d2879af8264742289ccdbff4e8abd038"
+                },
+                {
+                    "name": "code",
+                    "value": "fb8b579c-2814-49db-8a3c-fb1209359a87",
+                    "id": "pair_d0bf73d6337f453d859f24914ad3bb4b"
+                },
+                {
+                    "name": "redirect_uri",
+                    "value": "mymap://oauth2redirect/fr",
+                    "id": "pair_68978a5be5ef4e48afdf19a81847e87a"
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Basic MWVlYmMyZDUtNWRmMy00NTliLWE2MjQtMjBhYmZjZjgyNTMwOlQ1dFA3aVMwY084c0MwbEEyaUUyYVI3Z0s2dUU1ckYzbEo4cEMzbk8xcFI3dEw4dlUx",
+                    "id": "pair_92568946aa234d93a13daadfa6f8bda7",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_fbe2ffb103f746fab9fb7b18988af30a",
+                    "name": "User-Agent",
+                    "value": "insomnia/10.3.0",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_6b485e0d92dc4971a2199219b79c043a",
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "authentication": {
+                "type": "none"
+            },
+            "metaSortKey": -1736536015899,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "parentId": null,
+            "modified": 1736337936406,
+            "created": 1736281218811,
+            "name": "PSA",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_94b7cada8e7e4f3ba10379302a7c3968",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1739993722904,
+            "created": 1736281332582,
+            "url": "{{ _.api_url }}user/vehicles?client_id={{ _.client_id }}",
+            "name": "Vehicles",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}",
+                "usePkce": true,
+                "pkceMethod": "S256",
+                "state": "",
+                "credentialsInBody": false
+            },
+            "metaSortKey": -1736281332582,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_ad4f321abaa442bcaea053921339d147",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736534984030,
+            "created": 1736281613009,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}",
+            "name": "Vehicle",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280433101.5,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_2650cac1b9d04fc2bbe0fb685ddd632d",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1737123923272,
+            "created": 1737123771224,
+            "url": "https://api.groupe-psa.com/connectedcar/v4/vin/{{ _.vehicle_vin }}",
+            "name": "Vehicle capabilities",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280404992.7344,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_ac047dc290294a50a06de72f0967d20b",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736282510341,
+            "created": 1736282506383,
+            "url": "{{ _.api_url }}user",
+            "name": "User",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280376883.9688,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_85e79e44e536417eb06d59a422096cc5",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736282273534,
+            "created": 1736282273534,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/collisions",
+            "name": "Collisions",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280320666.4375,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_3b394ac3ca0f448eb6d022288af0b09a",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736282208489,
+            "created": 1736282181715,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/alarms",
+            "name": "Alarms",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280208231.375,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_c9275afccdee4eb28a952c3634f51ae5",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736284441803,
+            "created": 1736284435482,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/alarms",
+            "name": "Alarms",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"label\": \"Battery changing\",\n  \"subscribeParam\": {  }, \n  \"extendedEventParam\": [ \"vehicle.status\" ],\n  \"triggerParam\": {\n    \"triggers\": [\n      {\n        \"name\": \"batteryStep\",\n        \"data\": { \"data\": \"vehicle.energy.electric.level\", \"op\": \"equal\", \"value\": [\"0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100\"] }\n      }\n    ]\n  }\n}\n"
+            },
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280180122.6094,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_fe66f4d4bf424aafad8e5c3467fe60a8",
+            "parentId": "fld_f74a8cecf2c54889ae5c8fe5f86e4831",
+            "modified": 1739987005897,
+            "created": 1736333791491,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/callbacks/{{ _.callback_id }}/remotes",
+            "name": "Remotes",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736333794600,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_f74a8cecf2c54889ae5c8fe5f86e4831",
+            "parentId": "fld_56814f2e91f94ec7bf66850a42e6c3f2",
+            "modified": 1736333780976,
+            "created": 1736333780976,
+            "name": "Remotes",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1736333780976,
+            "environmentType": "kv",
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_56814f2e91f94ec7bf66850a42e6c3f2",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736333765597,
+            "created": 1736319917292,
+            "name": "Callbacks",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1736280166068.2266,
+            "environmentType": "kv",
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_9d98194050f94118b479fee7db124347",
+            "parentId": "fld_f74a8cecf2c54889ae5c8fe5f86e4831",
+            "modified": 1736337106666,
+            "created": 1736337052205,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/callbacks/{{ _.callback_id }}/remotes/{{ _.remote_action_id }}",
+            "name": "Remote",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736333714269.75,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_cebeb840b35f4626b410e809e8bec3cf",
+            "parentId": "fld_f74a8cecf2c54889ae5c8fe5f86e4831",
+            "modified": 1737581891037,
+            "created": 1736333865805,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/callbacks/{{ _.callback_id }}/remotes",
+            "name": "Remotes",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"label\": \"wakup\",\n  \"wakeUp\": {\n    \"action\": \"WakeUp\"\n  }\n}"
+            },
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736333633939.5,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_ac82d810b4564069be01755e17ada609",
+            "parentId": "fld_706a307135754264ad8086d2df62934e",
+            "modified": 1736333526526,
+            "created": 1736333469777,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/{{ _.callback_id }}/monitors",
+            "name": "Monitors",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"label\": \"test\",\n\t\"type\": [\n\t\t\"Monitor\",\n\t\t\"Remote\"\n\t],\n\t\"wakeUp\": {\n\t\t\"action\": \"WakeUp\"\n\t},\n\t\"callback\": {\n\t\t\"webhook\": {\n\t\t\t\"target\": \"https://my.post.callback\",\n\t\t\t\"name\": \"wakeup\",\n\t\t\t\"batch\": {\n\t\t\t\t\"enabled\": true,\n\t\t\t\t\"size\": 100\n\t\t\t},\n\t\t\t\"attributes\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Header\",\n\t\t\t\t\t\"key\": \"X-Vehicle_Id\",\n\t\t\t\t\t\"value\": \"zz\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+            },
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736333473279,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_706a307135754264ad8086d2df62934e",
+            "parentId": "fld_56814f2e91f94ec7bf66850a42e6c3f2",
+            "modified": 1736333457776,
+            "created": 1736333457776,
+            "name": "Monitors",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1736333457776,
+            "environmentType": "kv",
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_b02bd12aa3c04e8e91bf907f376f7631",
+            "parentId": "fld_56814f2e91f94ec7bf66850a42e6c3f2",
+            "modified": 1737581690609,
+            "created": 1736282914301,
+            "url": "{{ _.api_url }}user/callbacks",
+            "name": "Callbacks",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"label\": \"callbackRemoteWakeUp\",\n\t\"type\": [ \"Remote\"],\n\t\"wakeUp\": {\n\t\t\"action\": \"WakeUp\"\n\t},\n\t\"callback\": {\n\t\t\"webhook\": {\n\t\t\t\"target\": \"https://my.post.callback\",\n\t\t\t\"name\": \"wakeup\"\n\t\t}\n\t}\n}"
+            },
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736319928568,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_3b8c0b1e311e4ff4af4c6770438b64e1",
+            "parentId": "fld_56814f2e91f94ec7bf66850a42e6c3f2",
+            "modified": 1736357743970,
+            "created": 1736333259057,
+            "url": "{{ _.api_url }}user/callbacks/{{ _.callback_id }}",
+            "name": "Callbacks",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"label\": \"test\",\n\t\"type\": [\n\t\t\"Monitor\",\n\t\t\"Remote\"\n\t],\n\t\"wakeUp\": {\n\t\t\"action\": \"WakeUp\"\n\t},\n\t\"callback\": {\n\t\t\"webhook\": {\n\t\t\t\"target\": \"https://my.post.callback\",\n\t\t\t\"name\": \"wakeup\",\n\t\t\t\"batch\": {\n\t\t\t\t\"enabled\": true,\n\t\t\t\t\"size\": 100\n\t\t\t},\n\t\t\t\"attributes\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Header\",\n\t\t\t\t\t\"key\": \"X-Vehicle_Id\",\n\t\t\t\t\t\"value\": \"zz\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+            },
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736319928518,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_a807f9873ee24063976a9f870b493528",
+            "parentId": "fld_56814f2e91f94ec7bf66850a42e6c3f2",
+            "modified": 1736334099312,
+            "created": 1736282318828,
+            "url": "{{ _.api_url }}user/callbacks",
+            "name": "Callbacks",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736319928468,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0a91192879824f91be4ace76539cd676",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736942151213,
+            "created": 1736282219803,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/trips",
+            "name": "Trips",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736280095796.3125,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b33e9c3d270d4619a3de450f15670129",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736282369564,
+            "created": 1736282042810,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/lastPosition",
+            "name": "Last position",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736279983361.25,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_f6e0bc001f7c4674b5bff4ff3487dcfa",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736282482864,
+            "created": 1736282478978,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/telemetry",
+            "name": "Telemetry",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736279758491.125,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b21f6cff66d64a87a35680c0eb08ecbd",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736547527917,
+            "created": 1736282547077,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/maintenance",
+            "name": "Maintenance",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736279646056.0625,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d43a469e44184ff5a18a718e6f083f77",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1737799114232,
+            "created": 1736282606475,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/status",
+            "name": "Status",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}",
+                "usePkce": true,
+                "pkceMethod": "S256"
+            },
+            "metaSortKey": -1736279589838.5312,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_825d40a49d8d4188a4c4c7bc512760a0",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736282802017,
+            "created": 1736282797523,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/monitors",
+            "name": "Monitors",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}"
+            },
+            "metaSortKey": -1736279561729.7656,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_6491164ddc014991aaeed27406ac6469",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736598238749,
+            "created": 1736285160474,
+            "url": "{{ _.api_url }}user/vehicles/{{ _.vehicule_id }}/remotes",
+            "name": "Remotes",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_b4e71e503734438fbb01dc82d6ca448b",
+                    "name": "client_id",
+                    "value": "{{ _.client_id }}",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "X-Introspect-Realm",
+                    "value": "{{ _.realm }}",
+                    "id": "pair_0bebc18e6ac741d89b71c2e0e87598b2"
+                }
+            ],
+            "authentication": {
+                "type": "oauth2",
+                "grantType": "authorization_code",
+                "authorizationUrl": "{{ _.authorization_url }}",
+                "accessTokenUrl": "{{ _.token_url }}",
+                "clientId": "{{ _.client_id }}",
+                "clientSecret": "{{ _.client_secret }}",
+                "scope": "openid profile",
+                "redirectUrl": "{{ _.redirect_rul }}",
+                "usePkce": true
+            },
+            "metaSortKey": -1736279547675.3828,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_b8db88da520dcca1f6d44bec94b29da006c961de",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1736281975313,
+            "created": 1736281218813,
+            "name": "Base Environment",
+            "data": {
+                "client_id": "1eebc2d5-5df3-459b-a624-20abfcf82530",
+                "client_secret": "T5tP7iS0cO8sC0lA2iE2aR7gK6uE5rF3lJ8pC3nO1pR7tL8vU1",
+                "authorization_url": "https://idpcvs.peugeot.com/am/oauth2/authorize",
+                "token_url": "https://idpcvs.peugeot.com/am/oauth2/access_token",
+                "redirect_rul": "mymap://oauth2redirect/fr",
+                "api_url": "https://api.groupe-psa.com/connectedcar/v4/",
+                "realm": "clientsB2CPeugeot"
+            },
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1736281218813,
+            "environmentType": "kv",
+            "kvPairData": [
+                {
+                    "id": "envPair_2ba6d940e38f481b8b0e407e338be314",
+                    "name": "client_id",
+                    "value": "1eebc2d5-5df3-459b-a624-20abfcf82530",
+                    "type": "str",
+                    "enabled": true
+                },
+                {
+                    "id": "envPair_630dab800401448fa849ff3b23260791",
+                    "name": "client_secret",
+                    "value": "T5tP7iS0cO8sC0lA2iE2aR7gK6uE5rF3lJ8pC3nO1pR7tL8vU1",
+                    "type": "str",
+                    "enabled": true
+                },
+                {
+                    "id": "envPair_93e4a1a161d64e4c91a2aab9255a9e21",
+                    "name": "authorization_url",
+                    "value": "https://idpcvs.peugeot.com/am/oauth2/authorize",
+                    "type": "str",
+                    "enabled": true
+                },
+                {
+                    "id": "envPair_f83e40d87d4542a98563a947b691e77f",
+                    "name": "token_url",
+                    "value": "https://idpcvs.peugeot.com/am/oauth2/access_token",
+                    "type": "str",
+                    "enabled": true
+                },
+                {
+                    "id": "envPair_22ae7e4ab0ae4921889c0439a970da1a",
+                    "name": "redirect_rul",
+                    "value": "mymap://oauth2redirect/fr",
+                    "type": "str",
+                    "enabled": true
+                },
+                {
+                    "id": "envPair_49c25c9959964aa9886a45811449ca51",
+                    "name": "api_url",
+                    "value": "https://api.groupe-psa.com/connectedcar/v4/",
+                    "type": "str",
+                    "enabled": true
+                },
+                {
+                    "id": "envPair_9c3b0417bf3b4d72afd6dc83fce366bd",
+                    "name": "realm",
+                    "value": "clientsB2CPeugeot",
+                    "type": "str",
+                    "enabled": true
+                }
+            ],
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_b8db88da520dcca1f6d44bec94b29da006c961de",
+            "parentId": "wrk_5331a61017564f45a0d7a83e997660c8",
+            "modified": 1737922994569,
+            "created": 1736281218814,
+            "name": "Default Jar",
+            "cookies": [
+                {
+                    "key": "PSACountry",
+                    "value": "FR",
+                    "domain": "groupe-psa.com",
+                    "path": "/",
+                    "hostOnly": false,
+                    "creation": "2025-01-07T20:22:35.611Z",
+                    "lastAccessed": "2025-01-07T20:22:35.611Z",
+                    "id": "b22f4664-1879-4b54-b529-705bbd67a617"
+                },
+                {
+                    "key": "BIGipServerBE_IDPCLI_CVS_PROD_HTTPS_VIRTUAL.app~BE_IDPCLI_CVS_PROD_HTTPS_VIRTUAL_pool",
+                    "value": "647135242.47873.0000",
+                    "domain": "idpcvs.peugeot.com",
+                    "path": "/",
+                    "secure": true,
+                    "httpOnly": true,
+                    "hostOnly": true,
+                    "creation": "2025-01-07T20:23:38.187Z",
+                    "lastAccessed": "2025-01-07T20:23:38.187Z",
+                    "id": "2360b0f8-bb1a-476c-954f-52be69793234"
+                },
+                {
+                    "key": "PSACountry",
+                    "value": "FR",
+                    "domain": "peugeot.com",
+                    "path": "/",
+                    "hostOnly": false,
+                    "creation": "2025-01-07T20:23:38.188Z",
+                    "lastAccessed": "2025-01-07T20:23:38.188Z",
+                    "id": "45783c5d-a48c-4f94-bbc8-bfd9c50ed7ab"
+                },
+                {
+                    "key": "rememberMe",
+                    "value": "deleteMe",
+                    "expires": "2025-01-25T20:23:14.000Z",
+                    "maxAge": 0,
+                    "domain": "api.groupe-psa.com",
+                    "path": "/",
+                    "hostOnly": true,
+                    "creation": "2025-01-07T20:24:04.555Z",
+                    "lastAccessed": "2025-01-26T20:23:14.568Z",
+                    "id": "9881d1ec-1d85-4320-9f1b-6d876e7a7439"
+                },
+                {
+                    "key": "JSESSIONID",
+                    "value": "UFX0DTc8ERORCUu0RK_hQrPSsLP_k5BIZtdKNcxV",
+                    "domain": "api.groupe-psa.com",
+                    "path": "/",
+                    "hostOnly": true,
+                    "creation": "2025-01-07T20:24:04.555Z",
+                    "lastAccessed": "2025-01-26T20:23:14.568Z",
+                    "id": "8028e5c8-c00f-4009-a156-975ee8f3d4e0"
+                }
+            ],
+            "_type": "cookie_jar"
+        }
+    ]
+}
