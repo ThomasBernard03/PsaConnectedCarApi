@@ -1,30 +1,28 @@
-# Psa ConnectedCar Api 🚗
+# PSA ConnectedCar API 🚗
 
-## Introduction
-Ce repository a pour vocation d'expliquer et de partager des informations autours de l'API de PSA. 
-Cette dernière est documentée à cet URL mais la documentation est assez pauvre et pourrais être clarifée.
-N'hésitez pas à contribuer pour améliorer cette documentation 👍
-
-## Routes
-
-### Login
-Tout d'abord l'api de PSA utilise OAuth2 avec un authorization code. La première étape est donc de récupérer un code.
-Si vous utilisez Insomnia ou Postman, il est plutôt simple de générer un Token. Il suffit de configurer une authentification :
-![image](https://github.com/user-attachments/assets/0a42083e-a274-4256-bd00-80f867f2d47b)
-
-https://idpcvs.peugeot.com/am/oauth2/authorize?client_id=1eebc2d5-5df3-459b-a624-20abfcf82530&response_type=code&redirect_uri=mymap://oauth2redirect/fr&scope=openid
+<img width="328" alt="image" src="https://github.com/user-attachments/assets/5f2595d8-4e07-4852-bcec-18928832a1e4" />
 
 
-## Variables
-Client Id : `1eebc2d5-5df3-459b-a624-20abfcf82530`
+## Introduction  
+This repository aims to explain and share information about the PSA API.  
+The API is documented at this URL, but the documentation is quite poor and could be clarified.  
+Feel free to contribute to improve this documentation 👍  
 
-Client Secret : `T5tP7iS0cO8sC0lA2iE2aR7gK6uE5rF3lJ8pC3nO1pR7tL8vU1`
+## Routes  
 
-Authorization Url : `https://idpcvs.peugeot.com/am/oauth2/authorize`
+### Login  
+First, the PSA API uses OAuth2 with an authorization code. The first step is to obtain a code.  
+If you use Insomnia or Postman, it is quite easy to generate a token. You just need to configure an authentication:  
+![image](https://github.com/user-attachments/assets/0a42083e-a274-4256-bd00-80f867f2d47b)  
 
-Realm : `clientsB2CPeugeot`
+[Authorization URL](https://idpcvs.peugeot.com/am/oauth2/authorize?client_id=1eebc2d5-5df3-459b-a624-20abfcf82530&response_type=code&redirect_uri=mymap://oauth2redirect/fr&scope=openid)
 
-API Base Url : `https://api.groupe-psa.com/connectedcar/v4/`
+## Variables  
 
+- **Client Id**: `1eebc2d5-5df3-459b-a624-20abfcf82530`  
+- **Client Secret**: `T5tP7iS0cO8sC0lA2iE2aR7gK6uE5rF3lJ8pC3nO1pR7tL8vU1`  
+- **Authorization Url**: `https://idpcvs.peugeot.com/am/oauth2/authorize`  
+- **Realm**: `clientsB2CPeugeot`  
+- **API Base Url**: `https://api.groupe-psa.com/connectedcar/v4/`  
 
-Ces infomrations peuvent être trouvées en décompilant l'APK MyPeugeot
+These details can be found by decompiling the MyPeugeot APK.
